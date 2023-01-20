@@ -1,26 +1,8 @@
-macro_bash_last_all: macro_bash_last_all{
+macro_smiley: macro_smiley{
 compatible = "zmk,behavior-macro";
-label = "macro_bash_last_all";
+label = "macro_smiley";
 #binding-cells = <0>;
-bindings = <&kp EXCLAMATION>, <&kp COLON>, <&kp ASTERISK>;
-};
-macro_bash_last_first: macro_bash_last_first{
-compatible = "zmk,behavior-macro";
-label = "macro_bash_last_first";
-#binding-cells = <0>;
-bindings = <&kp EXCLAMATION>, <&kp COLON>, <&kp CARET>;
-};
-macro_bash_last_last: macro_bash_last_last{
-compatible = "zmk,behavior-macro";
-label = "macro_bash_last_last";
-#binding-cells = <0>;
-bindings = <&kp EXCLAMATION>, <&kp COLON>, <&kp DOLLAR>;
-};
-macro_frowny: macro_frowny{
-compatible = "zmk,behavior-macro";
-label = "macro_frowny";
-#binding-cells = <0>;
-bindings = <&kp COLON>, <&kp MINUS>, <&kp LEFT_PARENTHESIS>;
+bindings = <&kp COLON>, <&kp MINUS>, <&kp RIGHT_PARENTHESIS>;
 };
 macro_wink: macro_wink{
 compatible = "zmk,behavior-macro";
@@ -28,9 +10,28 @@ label = "macro_wink";
 #binding-cells = <0>;
 bindings = <&kp SEMICOLON>, <&kp MINUS>, <&kp RIGHT_PARENTHESIS>;
 };
-macro_smiley: macro_smiley{
+macro_frowny: macro_frowny{
 compatible = "zmk,behavior-macro";
-label = "macro_smiley";
+label = "macro_frowny";
 #binding-cells = <0>;
-bindings = <&kp COLON>, <&kp MINUS>, <&kp RIGHT_PARENTHESIS>;
+bindings = <&kp COLON>, <&kp MINUS>, <&kp LEFT_PARENTHESIS>;
 };
+macro_bash_last_last: macro_bash_last_last{
+compatible = "zmk,behavior-macro";
+label = "macro_bash_last_last";
+#binding-cells = <0>;
+bindings = <&kp EXCLAMATION>, <&kp COLON>, <&kp DOLLAR>;
+};
+macro_bash_last_first: macro_bash_last_first{
+compatible = "zmk,behavior-macro";
+label = "macro_bash_last_first";
+#binding-cells = <0>;
+bindings = <&kp EXCLAMATION>, <&kp COLON>, <&kp CARET>;
+};
+macro_bash_last_all: macro_bash_last_all{
+compatible = "zmk,behavior-macro";
+label = "macro_bash_last_all";
+#binding-cells = <0>;
+bindings = <&kp EXCLAMATION>, <&kp COLON>, <&kp ASTERISK>;
+};
+
