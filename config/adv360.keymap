@@ -56,11 +56,11 @@
 
         layer_symbol {
             bindings = <
- &trans           &trans     &trans     &trans      &trans       &trans            &trans  &trans     &trans         &trans        &trans    &trans         &trans  &trans
- &trans  &kp EXCLAMATION     &kp AT  &kp POUND  &kp DOLLAR  &kp PERCENT            &trans  &trans  &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp PIPE  &kp BACKSLASH  &trans
- &trans           &trans   &kp LBRC   &kp RBRC    &kp LPAR     &kp RPAR            &trans  &trans     &trans                                 &trans         &trans  &trans  &kp EQUAL  &kp UNDERSCORE       &kp PLUS         &kp TILDE     &kp COLON  &trans
- &trans           &trans  &kp GRAVE   &kp LBKT    &kp RBKT       &trans            &trans  &trans     &trans         &trans        &trans    &trans         &trans  &trans     &trans       &kp MINUS  &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION  &trans
- &trans           &trans     &trans     &trans      &trans       &trans            &trans  &trans     &trans         &trans        &trans    &trans         &trans  &trans     &trans          &trans
+ &trans    &macro_smiley  &macro_wink  &macro_frowny  &macro_bash_last_last       &trans            &trans  &trans  &macro_bash_last_first         &trans  &macro_bash_last_all    &trans         &trans  &trans
+ &trans  &kp EXCLAMATION       &kp AT      &kp POUND             &kp DOLLAR  &kp PERCENT            &trans  &trans               &kp CARET  &kp AMPERSAND          &kp ASTERISK  &kp PIPE  &kp BACKSLASH  &trans
+ &trans           &trans     &kp LBRC       &kp RBRC               &kp LPAR     &kp RPAR            &trans  &trans                  &trans                                         &trans         &trans  &trans  &kp EQUAL  &kp UNDERSCORE       &kp PLUS         &kp TILDE     &kp COLON  &trans
+ &trans           &trans    &kp GRAVE       &kp LBKT               &kp RBKT       &trans            &trans  &trans                  &trans         &trans                &trans    &trans         &trans  &trans     &trans       &kp MINUS  &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION  &trans
+ &trans           &trans       &trans         &trans                 &trans       &trans            &trans  &trans                  &trans         &trans                &trans    &trans         &trans  &trans     &trans          &trans
             >;
         };
 

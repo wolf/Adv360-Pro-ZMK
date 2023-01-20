@@ -1,36 +1,36 @@
-macro_quotes: macro_quotes{
+macro_bash_last_all: macro_bash_last_all{
 compatible = "zmk,behavior-macro";
-label = "macro_quotes";
+label = "macro_bash_last_all";
 #binding-cells = <0>;
-bindings = <&kp SQT>, <&kp SQT>, <&kp LEFT>;
+bindings = <&kp EXCLAMATION>, <&kp COLON>, <&kp ASTERISK>;
 };
-macro_dquotes: macro_dquotes{
+macro_bash_last_first: macro_bash_last_first{
 compatible = "zmk,behavior-macro";
-label = "macro_dquotes";
+label = "macro_bash_last_first";
 #binding-cells = <0>;
-bindings = <&kp DQT>, <&kp DQT>, <&kp LEFT>;
+bindings = <&kp EXCLAMATION>, <&kp COLON>, <&kp CARET>;
 };
-macro_braces: macro_braces{
+macro_bash_last_last: macro_bash_last_last{
 compatible = "zmk,behavior-macro";
-label = "macro_braces";
+label = "macro_bash_last_last";
 #binding-cells = <0>;
-bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
+bindings = <&kp EXCLAMATION>, <&kp COLON>, <&kp DOLLAR>;
 };
-macro_parens: macro_parens{
+macro_frowny: macro_frowny{
 compatible = "zmk,behavior-macro";
-label = "macro_parens";
+label = "macro_frowny";
 #binding-cells = <0>;
-bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
+bindings = <&kp COLON>, <&kp MINUS>, <&kp LEFT_PARENTHESIS>;
 };
-macro_brackets: macro_brackets{
+macro_wink: macro_wink{
 compatible = "zmk,behavior-macro";
-label = "macro_brackets";
+label = "macro_wink";
 #binding-cells = <0>;
-bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
+bindings = <&kp SEMICOLON>, <&kp MINUS>, <&kp RIGHT_PARENTHESIS>;
 };
-macro_kinesis: macro_kinesis{
+macro_smiley: macro_smiley{
 compatible = "zmk,behavior-macro";
-label = "macro_kinesis";
+label = "macro_smiley";
 #binding-cells = <0>;
-bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
+bindings = <&kp COLON>, <&kp MINUS>, <&kp RIGHT_PARENTHESIS>;
 };
