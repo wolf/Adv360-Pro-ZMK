@@ -18,51 +18,6 @@
     behaviors {
         #include "macros.dtsi"
       #include "version.dtsi"
-      #ifndef
-
-        macro_smiley: macro_smiley {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp COLON &kp MINUS &kp RIGHT_PARENTHESIS>;
-            label = "MACRO_SMILEY";
-        };
-
-        macro_wink: macro_wink {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SEMICOLON &kp MINUS &kp RIGHT_PARENTHESIS>;
-            label = "MACRO_WINK";
-        };
-
-        macro_frowny: macro_frowny {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp COLON &kp MINUS &kp LEFT_PARENTHESIS>;
-            label = "MACRO_FROWNY";
-        };
-
-        macro_bash_last_last: macro_bash_last_last {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp EXCLAMATION &kp COLON &kp DOLLAR>;
-            label = "MACRO_BASH_LAST_LAST";
-        };
-
-        macro_bash_last_first: macro_bash_last_first {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp EXCLAMATION &kp COLON &kp CARET>;
-            label = "MACRO_BASH_LAST_FIRST";
-        };
-
-        macro_bash_last_all: macro_bash_last_all {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp EXCLAMATION &kp COLON &kp ASTERISK>;
-            label = "MACRO_BASH_LAST_ALL";
-        };
-
-        #endif
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
