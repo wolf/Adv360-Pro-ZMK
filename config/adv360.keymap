@@ -1,11 +1,8 @@
-
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
-
-
 /* THIS FILE WAS GENERATED!
  *
  * This file was generated automatically. You may or may not want to
@@ -15,85 +12,121 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-&mt {
-    tapping-term-ms = <450>;
-};
+&mt { tapping-term-ms = <450>; };
 
 / {
     behaviors {
-      #include "macros.dtsi"
+        #include "macros.dtsi"
       #include "version.dtsi"
-      #ifndef VERSION_MACRO
-      macro_ver: macro_ver {
-        compatible = "zmk,behavior-macro";
-        label = "macro_version";
-        #binding-cells = <0>;
-        bindings = <&kp RET>;
-      };
-      #endif
+      #ifndef
 
-    hm: homerow_mods {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_MODS";
-        #binding-cells = <2>;
-        tapping-term-ms = <425>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&kp>;
+        macro_smiley: macro_smiley {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp MINUS &kp RIGHT_PARENTHESIS>;
+            label = "MACRO_SMILEY";
+        };
+
+        macro_wink: macro_wink {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SEMICOLON &kp MINUS &kp RIGHT_PARENTHESIS>;
+            label = "MACRO_WINK";
+        };
+
+        macro_frowny: macro_frowny {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp MINUS &kp LEFT_PARENTHESIS>;
+            label = "MACRO_FROWNY";
+        };
+
+        macro_bash_last_last: macro_bash_last_last {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCLAMATION &kp COLON &kp DOLLAR>;
+            label = "MACRO_BASH_LAST_LAST";
+        };
+
+        macro_bash_last_first: macro_bash_last_first {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCLAMATION &kp COLON &kp CARET>;
+            label = "MACRO_BASH_LAST_FIRST";
+        };
+
+        macro_bash_last_all: macro_bash_last_all {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCLAMATION &kp COLON &kp ASTERISK>;
+            label = "MACRO_BASH_LAST_ALL";
+        };
+
+        #endif
+
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <425>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        mo_tog: behavior_mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            label = "mo_tog";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&tog>;
+        };
     };
 
-    mo_tog: behavior_mo_tog {
-        compatible = "zmk,behavior-hold-tap";
-        label = "mo_tog";
-        #binding-cells = <2>;
-        flavor = "hold-preferred";
-        tapping-term-ms = <200>;
-        bindings = <&mo>, <&tog>;
+    macros {
     };
-  };
 
     keymap {
         compatible = "zmk,keymap";
 
-
         default_layer {
             bindings = <
-         &none      &none     &none     &none   &none  &kp LG(LS(N5))              &none       &mt LA(LG(I)) LG(R)           &kp LEFT  &kp RIGHT      &none                 &none     &none     &none
-       &kp TAB      &kp Q     &kp W     &kp E   &kp R           &kp T              &none       &none              &kp Y      &kp U      &kp I                 &kp O     &kp P     &none
- &mt LCTRL ESC      &kp A     &hm LG(S) S     &kp D   &kp F           &kp G              &none       &mo 3             &kp UP                        &kp RA(RS(RC(RGUI)))     &mo 3     &none      &kp H   &kp J      &kp K    &kp L  &kp SEMI    &kp SQT
-     &kp LSHFT      &hm LG(Z) Z     &hm LG(X) X     &hm LG(C) C   &hm LG(V) V           &kp B              &kp DOWN      &mo_tog 1 1     &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-         &mo 2  &kp LCTRL  &kp LALT  &kp LGUI  &mo_tog 1 1        &kp BSPC            &kp DEL  &caps_word  &kp RA(RS(RCTRL))  &kp ENTER  &kp SPACE                 &none  &kp RGUI  &kp RALT  &kp RCTRL   &mo 2
+&none          &none        &none        &none        &none        &kp LG(LS(N5))  &none                                                               &mt LA(LG(I)) LG(R)  &kp LEFT  &kp RIGHT  &none      &none     &none      &none
+&kp TAB        &kp Q        &kp W        &kp E        &kp R        &kp T           &none                                                               &none                &kp Y     &kp U      &kp I      &kp O     &kp P      &none
+&mt LCTRL ESC  &kp A        &hm LG(S) S  &kp D        &kp F        &kp G           &none     &mo 3    &kp UP          &kp RA(RS(RC(RGUI)))  &mo 3      &none                &kp H     &kp J      &kp K      &kp L     &kp SEMI   &kp SQT
+&kp LSHFT      &hm LG(Z) Z  &hm LG(X) X  &hm LG(C) C  &hm LG(V) V  &kp B                              &kp DOWN        &mo_tog 1 1                                           &kp N     &kp M      &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
+&mo 2          &kp LCTRL    &kp LALT     &kp LGUI     &mo_tog 1 1                  &kp BSPC  &kp DEL  &caps_word      &kp RA(RS(RCTRL))     &kp ENTER  &kp SPACE                      &none      &kp RGUI   &kp RALT  &kp RCTRL  &mo 2
             >;
         };
 
         layer_numpad {
             bindings = <
- &trans   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5            &trans  &trans  &trans        &trans     &trans     &trans     &trans      &trans
- &trans   &kp F6   &kp F7   &kp F8   &kp F9  &kp F10            &trans  &trans  &trans     &kp KP_N7  &kp KP_N8  &kp KP_N9     &trans      &trans
- &trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15            &trans  &trans  &trans                              &trans     &trans      &trans  &trans  &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans  &trans
- &trans  &kp F16  &kp F17  &kp F18  &kp F19  &kp F20                            &trans                              &trans                         &trans  &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans  &trans
- &trans   &trans   &trans   &trans   &trans   &trans            &trans  &trans  &trans  &kp KP_ENTER     &trans     &trans  &kp KP_N0  &kp KP_DOT  &trans     &trans
+&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &trans                                            &trans  &trans  &trans     &trans     &trans      &trans  &trans
+&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans                                            &trans  &trans  &kp KP_N7  &kp KP_N8  &kp KP_N9   &trans  &trans
+&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans  &trans  &trans      &trans  &trans        &trans  &trans  &kp KP_N4  &kp KP_N5  &kp KP_N6   &trans  &trans
+&trans  &kp F16  &kp F17  &kp F18  &kp F19  &kp F20                  &trans      &trans                        &trans  &kp KP_N1  &kp KP_N2  &kp KP_N3   &trans  &trans
+&trans  &trans   &trans   &trans   &trans            &trans  &trans  &trans      &trans  &kp KP_ENTER  &trans          &trans     &kp KP_N0  &kp KP_DOT  &trans  &trans
             >;
         };
 
         layer_symbol {
             bindings = <
- &trans    &macro_smiley  &macro_wink  &macro_frowny  &macro_bash_last_last       &trans            &trans  &trans  &macro_bash_last_first         &trans  &macro_bash_last_all    &trans         &trans  &trans
- &trans  &kp EXCLAMATION       &kp AT      &kp POUND             &kp DOLLAR  &kp PERCENT            &trans  &trans               &kp CARET  &kp AMPERSAND          &kp ASTERISK  &kp PIPE  &kp BACKSLASH  &trans
- &trans           &trans     &kp LBRC       &kp RBRC               &kp LPAR     &kp RPAR            &trans  &trans                  &trans                                         &trans         &trans  &trans  &kp EQUAL  &kp UNDERSCORE       &kp PLUS         &kp TILDE     &kp COLON  &trans
- &trans           &trans    &kp GRAVE       &kp LBKT               &kp RBKT                                                                                                        &trans         &trans  &trans     &trans       &kp MINUS  &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION  &trans
- &trans           &trans       &trans         &trans                 &trans       &trans            &trans  &trans                  &trans         &trans                &trans    &trans         &trans  &trans     &trans          &trans
+&trans  &macro_smiley    &macro_wink  &macro_frowny  &macro_bash_last_last  &trans       &trans                                      &trans  &macro_bash_last_first  &trans          &macro_bash_last_all  &trans            &trans         &trans
+&trans  &kp EXCLAMATION  &kp AT       &kp POUND      &kp DOLLAR             &kp PERCENT  &trans                                      &trans  &kp CARET               &kp AMPERSAND   &kp ASTERISK          &kp PIPE          &kp BACKSLASH  &trans
+&trans  &trans           &kp LBRC     &kp RBRC       &kp LPAR               &kp RPAR     &trans  &trans  &trans      &trans  &trans  &trans  &kp EQUAL               &kp UNDERSCORE  &kp PLUS              &kp TILDE         &kp COLON      &trans
+&trans  &trans           &kp GRAVE    &kp LBKT       &kp RBKT               &trans                       &trans      &trans                  &trans                  &kp MINUS       &kp LESS_THAN         &kp GREATER_THAN  &kp QUESTION   &trans
+&trans  &trans           &trans       &trans         &trans                              &trans  &trans  &trans      &trans  &trans  &trans                          &trans          &trans                &trans            &trans         &trans
             >;
         };
 
         layer_nav {
             bindings = <
- &trans      &trans        &trans        &trans            &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans      &trans        &trans        &trans            &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &kp K_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PLAY_PAUSE  &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
- &trans      &trans        &trans        &trans            &trans  &trans                            &trans                  &trans                    &trans    &trans  &trans     &trans  &trans  &trans
- &trans      &trans        &trans        &trans            &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans
+&trans  &trans      &trans        &trans        &trans            &trans  &trans                                      &trans  &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans      &trans        &trans        &trans            &trans  &trans                                      &trans  &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &kp K_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PLAY_PAUSE  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&trans  &trans      &trans        &trans        &trans            &trans                  &trans      &trans                  &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans      &trans        &trans        &trans                    &trans  &trans  &trans      &trans  &trans  &trans            &trans    &trans  &trans     &trans  &trans
             >;
         };
-
     };
 };
